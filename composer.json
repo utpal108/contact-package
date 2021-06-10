@@ -1,0 +1,26 @@
+{
+    "name": "gaurangadas/contact",
+    "description": "This will send email to admin and save contact query to database",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Utpal Paul",
+            "email": "utpalseu@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Gaurangadas\\Contact\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gaurangadas\\Contact\\ContactServiceProvider"
+            ]
+        }
+    }
+}
