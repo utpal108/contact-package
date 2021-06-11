@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gaurangadas\\Contact\\ContactServiceProvider"
+                "Gaurangadas\\Contact\\Providers\\ContactServiceProvider"
             ]
         }
     }
