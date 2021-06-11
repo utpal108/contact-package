@@ -18,11 +18,13 @@ class ContactMailable extends Mailable
      */
 
     public $name;
+    public $email;
     public $message;
 
-    public function __construct($name, $message)
+    public function __construct($name, $email, $message)
     {
         $this->name = $name;
+        $this->email = $email;
         $this->message = $message;
     }
 
@@ -33,6 +35,6 @@ class ContactMailable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('contact::emails.contact');
+        return $this->from($this->email)->markdown('contact::emails.contact');
     }
 }

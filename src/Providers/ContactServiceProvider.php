@@ -29,7 +29,9 @@
             $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
             $this->publishes([
-                __DIR__.'/../views' => resource_path('views/vendor/contact'),
+                __DIR__.'/../views' => resource_path('views/vendor/contact')
+            ]);
+            $this->publishes([
                 __DIR__.'/../config/contact.php' => config_path('contact.php')
             ]);
         }

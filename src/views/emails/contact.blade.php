@@ -1,10 +1,13 @@
 @component('mail::message')
-# Introduction
+# Hello,
 
-The body of your message.
+There is new query from {{$name}}
+<br>
+Message:
+{{$message}}
 
-@component('mail::button', ['url' => ''])
-Button Text
+@component('mail::button', ['url' => 'mailto: '.$email])
+Replay
 @endcomponent
 
 Thanks,<br>
