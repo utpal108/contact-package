@@ -20,7 +20,7 @@ class ContactController extends Controller
             'email' => 'bail|required|email|max:100',
             'message' => 'required|string|max:280',
         ]);
-        Mail::to(config('contact.email_send_to'))->send(new ContactMailable($request->name, $request->message));
+        Mail::to(config('contact.email_send_to'))->send(new ContactMailable($request->name, $request->email, $request->message));
         Contact::create($request->all());
         return redirect(route('contact'));
     }
